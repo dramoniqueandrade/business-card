@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drª Monique Andrade | Odontologia e Estética Orofacial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(160deg, #1a2340 0%, #1e263e 40%, #2a3050 100%);
+            color: #f0e8e4;
+            padding: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ---- Crown icon ---- */
+        .crown {
+            margin-bottom: 8px;
+        }
+        .crown svg {
+            width: 56px;
+            height: 56px;
+        }
+
+        /* ---- Name & title ---- */
+        .name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.85rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            color: #e8c5b8;
+            margin-bottom: 4px;
+        }
+        .subtitle {
+            font-size: 0.82rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: #c8a898;
+            margin-bottom: 32px;
+        }
+
+        /* ---- Divider ---- */
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+        .divider .line {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #c8a07a, transparent);
+        }
+        .divider .heart { font-size: 10px; color: #c8a07a; }
+
+        /* ---- Buttons ---- */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 40px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 22px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .link-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 14px;
+            border: 1.5px solid rgba(200, 165, 75, 0.3);
+            transition: border-color 0.3s ease;
+        }
+        .link-btn:hover::before {
+            border-color: rgba(200, 165, 75, 0.7);
+        }
+        .link-btn:active {
+            transform: scale(0.97);
+        }
+
+        .link-btn .icon {
+            font-size: 1.4rem;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+
+        .link-btn .label {
+            flex: 1;
+            text-align: left;
+        }
+
+        .link-btn .arrow {
+            font-size: 0.8rem;
+            opacity: 0.4;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .link-btn:hover .arrow {
+            opacity: 0.8;
+            transform: translateX(3px);
+        }
+
+        /* WhatsApp */
+        .btn-whatsapp {
+            background: linear-gradient(135deg, rgba(37, 211, 102, 0.12), rgba(37, 211, 102, 0.05));
+            color: #e0f0e6;
+        }
+        .btn-whatsapp .icon {
+            background: rgba(37, 211, 102, 0.2);
+            color: #25d366;
+        }
+
+        /* Instagram */
+        .btn-instagram {
+            background: linear-gradient(135deg, rgba(225, 48, 108, 0.12), rgba(188, 42, 141, 0.05));
+            color: #f0e0ea;
+        }
+        .btn-instagram .icon {
+            background: linear-gradient(135deg, rgba(225, 48, 108, 0.25), rgba(188, 42, 141, 0.2));
+            color: #e1306c;
+        }
+
+        /* Maps */
+        .btn-maps {
+            background: linear-gradient(135deg, rgba(200, 165, 75, 0.12), rgba(200, 165, 75, 0.05));
+            color: #f0e8d8;
+        }
+        .btn-maps .icon {
+            background: rgba(200, 165, 75, 0.2);
+            color: #c8a54b;
+        }
+
+        /* ---- Footer ---- */
+        .footer {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #c8a07a;
+            opacity: 0.7;
+        }
+
+        /* ---- Address ---- */
+        .address {
+            font-size: 0.72rem;
+            font-weight: 300;
+            color: #8090a8;
+            margin-top: 20px;
+            line-height: 1.5;
+            letter-spacing: 0.3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+
+        <!-- Crown -->
+        <div class="crown">
+            <svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 8 L62 35 L85 18 L75 55 L25 55 L15 18 L38 35 Z"
+                      stroke="#d4a87a" stroke-width="2.5" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <!-- Name -->
+        <h1 class="name">Drª Monique Andrade</h1>
+        <p class="subtitle">Odontologia e Estética Orofacial Avançada</p>
+
+        <!-- Divider -->
+        <div class="divider">
+            <span class="line"></span>
+            <span class="heart">♡</span>
+            <span class="line"></span>
+        </div>
+
+        <!-- Links -->
+        <div class="links">
+
+            <a href="https://wa.me/5521965471494?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
+               class="link-btn btn-whatsapp" target="_blank" rel="noopener">
+                <span class="icon">💬</span>
+                <span class="label">Falar pelo WhatsApp</span>
+                <span class="arrow">›</span>
+            </a>
+
+            <a href="https://www.instagram.com/dra.moniqueandrade"
+               class="link-btn btn-instagram" target="_blank" rel="noopener">
+                <span class="icon">📷</span>
+                <span class="label">Instagram</span>
+                <span class="arrow">›</span>
+            </a>
+
+            <a href="https://maps.google.com/?q=-22.906219598393093,-43.559649652108625"
+               class="link-btn btn-maps" target="_blank" rel="noopener">
+                <span class="icon">📍</span>
+                <span class="label">Como chegar ao consultório</span>
+                <span class="arrow">›</span>
+            </a>
+
+        </div>
+
+        <!-- Footer -->
+        <p class="footer">Seu sorriso em boas mãos</p>
+
+        <p class="address">
+            Av. Cesário de Melo, 2855 · Sala 502<br>
+            Campo Grande — Rio de Janeiro, RJ
+        </p>
+
+    </div>
+</body>
+</html>
